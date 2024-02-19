@@ -14,15 +14,12 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package study.sustaindev.tictactoe.model;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class ComputerMove {
+public class GameTable {
 
-    public void make(final GameTable gameTable) {
-
-    }
 }

@@ -14,15 +14,17 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package study.sustaindev.tictactoe.component;
+
+import study.sustaindev.tictactoe.model.GameTable;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class DrawVerifier {
+public class UserMove {
 
-    public boolean isDraw(final GameTable gameTable) {
-        return false;
+    public void make(final GameTable gameTable) {
+
     }
 }

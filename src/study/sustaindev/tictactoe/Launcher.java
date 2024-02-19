@@ -16,12 +16,18 @@
 
 package study.sustaindev.tictactoe;
 
+import study.sustaindev.tictactoe.component.*;
+
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
 public class Launcher {
-    public static void main(final String[] args) {
 
+    public static void main(final String[] args) {
+        final Game game = new Game(
+                new DataPrinter(), new ComputerMove(), new UserMove(), new WinnerVerifier(), new DrawVerifier()
+        );
+        game.play();
     }
 }

@@ -14,7 +14,9 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package study.sustaindev.tictactoe.component;
+
+import study.sustaindev.tictactoe.model.GameTable;
 
 import java.util.Random;
 
@@ -26,20 +28,17 @@ public class Game {
 
     private final DataPrinter dataPrinter;
     private final ComputerMove computerMove;
-    private final DataPrint dataPrint;
     private final UserMove userMove;
     private final WinnerVerifier winnerVerifier;
     private final DrawVerifier drawVerifier;
 
     public Game(final DataPrinter dataPrinter,
                 final ComputerMove computerMove,
-                final DataPrint dataPrint,
                 final UserMove userMove,
                 final WinnerVerifier winnerVerifier,
                 final DrawVerifier drawVerifier) {
         this.dataPrinter = dataPrinter;
         this.computerMove = computerMove;
-        this.dataPrint = dataPrint;
         this.userMove = userMove;
         this.winnerVerifier = winnerVerifier;
         this.drawVerifier = drawVerifier;
@@ -51,11 +50,11 @@ public class Game {
         final GameTable gameTable = new GameTable();
         if (new Random().nextBoolean()) {
             computerMove.make(gameTable);
-            dataPrint.printGameTable(gameTable);
+            dataPrinter.printGameTable(gameTable);
         }
         while (true) {
             userMove.make(gameTable);
-            dataPrint.printGameTable(gameTable);
+            dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isUserWin(gameTable)) {
                 System.out.println("YOU WIN!");
 //                System.out.println("GAME OVER!");
@@ -69,7 +68,7 @@ public class Game {
                 break;
             }
             computerMove.make(gameTable);
-            dataPrint.printGameTable(gameTable);
+            dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isComputerWin()) {
                 System.out.println("COMPUTER WIN!");
 //                System.out.println("GAME OVER!");
