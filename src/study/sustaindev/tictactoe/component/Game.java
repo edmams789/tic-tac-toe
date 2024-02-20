@@ -45,7 +45,7 @@ public class Game {
     }
 
     public void play() {
-        System.out.println("Use the folliwing mapping table to specitfy a cell using numbers from 1 to 9: ");
+        System.out.println("Use the folliwing mapping table to specitfy a cell using numbers from 1 to 9:");
         dataPrinter.printMappingTable();
         final GameTable gameTable = new GameTable();
         if (new Random().nextBoolean()) {
@@ -57,32 +57,23 @@ public class Game {
             dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isUserWin(gameTable)) {
                 System.out.println("YOU WIN!");
-//                System.out.println("GAME OVER!");
-//                return;
                 break;
             }
             if (drawVerifier.isDraw(gameTable)) {
                 System.out.println("Sorry, DRAW!");
-//                System.out.println("GAME OVER!");
-//                return;
                 break;
             }
             computerMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
             if (winnerVerifier.isComputerWin()) {
                 System.out.println("COMPUTER WIN!");
-//                System.out.println("GAME OVER!");
-//                return;
                 break;
             }
             if (drawVerifier.isDraw(gameTable)) {
                 System.out.println("Sorry, DRAW!");
-//                System.out.println("GAME OVER!");
-//                return;
                 break;
             }
         }
         System.out.println("GAME OVER!");
-//        return;
     }
 }

@@ -20,27 +20,22 @@ package study.sustaindev.tictactoe.model;
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class GameTable {
+public class Cell {
 
-    private final char[][] table = {
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '}
-    };
+    private final int row;
 
-    //Проверить - пустая ячейка или нет
-    public boolean isEmpty(final Cell cell) {
-        return table[cell.getRow()][cell.getCol()] == ' ';
+    private final int col;
+
+    public Cell(final int row, final int col) {
+        this.row = row;
+        this.col = col;
     }
 
-    //Определить - какой символ записан в ячейку
-    public char getSing(final Cell cell) {
-        return table[cell.getRow()][cell.getCol()];
+    public int getRow() {
+        return row;
     }
 
-    //Обновить состояние игрового поля
-    public void setSign(final Cell cell, final char sign) {
-        table[cell.getRow()][cell.getCol()] = sign;
+    public int getCol() {
+        return col;
     }
-
 }
