@@ -65,7 +65,7 @@ public class Game {
             }
             computerMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
-            if (winnerVerifier.isComputerWin()) {
+            if (winnerVerifier.isComputerWin(gameTable)) {
                 System.out.println("COMPUTER WIN!");
                 break;
             }
