@@ -45,13 +45,6 @@ public class GameTable {
         table[cell.getRow()][cell.getCol()] = sign;
     }
 
-//    @Override
-//    public String toString() {
-//        return "GameTable{" +
-//                "table=" + Arrays.toString(table) +
-//                '}';
-//    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("GameTable{");

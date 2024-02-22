@@ -16,6 +16,7 @@
 
 package study.sustaindev.tictactoe.component;
 
+import study.sustaindev.tictactoe.model.Cell;
 import study.sustaindev.tictactoe.model.GameTable;
 
 /**
@@ -23,11 +24,57 @@ import study.sustaindev.tictactoe.model.GameTable;
  * @link http:// sustaindev.study/java
  */
 public class DataPrinter {
+
+    /*
+    должен отображать таблицу соответствия между цифрами на цифровой клавиатуре и ячейками игрового поля
+
+    -------------
+    | 7 | 8 | 9 |
+    -------------
+    | 4 | 5 | 6 |
+    -------------
+    | 1 | 2 | 3 |
+    -------------
+     */
     public void printMappingTable() {
-
+        System.out.println("-------------");
+        System.out.println("| 7 | 8 | 9 |");
+        System.out.println("-------------");
+        System.out.println("| 4 | 5 | 6 |");
+        System.out.println("-------------");
+        System.out.println("| 1 | 2 | 3 |");
+        System.out.println("-------------");
     }
 
+    /*
+    должен отображать текущее состояние игрового поля
+
+    -------------
+    |   |   |   |
+    -------------
+    |   | X |   |
+    -------------
+    |   |   | O |
+    -------------
+    */
     public void printGameTable(final GameTable gameTable) {
+//        System.out.println("-------------");
+//        System.out.println("| " + gameTable.getSing(new Cell(0, 0)) + " | " + gameTable.getSing(new Cell(0, 1)) + " | " + gameTable.getSing(new Cell(0, 2)) + " |");
+//        System.out.println("-------------");
+//        System.out.println("| " + gameTable.getSing(new Cell(1, 0)) + " | " + gameTable.getSing(new Cell(1, 1)) + " | " + gameTable.getSing(new Cell(1, 2)) + " |");
+//        System.out.println("-------------");
+//        System.out.println("| " + gameTable.getSing(new Cell(2, 0)) + " | " + gameTable.getSing(new Cell(2, 1)) + " | " + gameTable.getSing(new Cell(2, 2)) + " |");
+//        System.out.println("-------------");
 
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-------------");
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + gameTable.getSing(new Cell(i, j)) + " ");
+            }
+            System.out.println("|");
+        }
+        System.out.println("-------------");
     }
+
 }
