@@ -14,23 +14,37 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe.component;
+package study.sustaindev.tictactoe.keypad;
 
+import study.sustaindev.tictactoe.component.CellNumberConverter;
 import study.sustaindev.tictactoe.model.Cell;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public interface CellNumberConverter {
+public class DesktopNumericKeypadCellNumberConverter implements CellNumberConverter {
 
-//    private final char[][] mapping = {
-//            {'7', '8', '9'},
-//            {'4', '5', '6'},
-//            {'1', '2', '3'}
-//    };
+    private final char[][] mapping = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
 
-    Cell toCell(char number);
+    @Override
+    public Cell toCell(final char number) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (mapping[i][j] == number) {
+                    return new Cell(i, j);
+                }
+            }
+        }
+        return null;
+    }
 
-    char toNumber(Cell cell);
+    @Override
+    public char toNumber(final Cell cell) {
+        return mapping[cell.getRow()][cell.getCol()];
+    }
 }

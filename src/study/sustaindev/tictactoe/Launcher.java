@@ -17,6 +17,7 @@
 package study.sustaindev.tictactoe;
 
 import study.sustaindev.tictactoe.component.*;
+import study.sustaindev.tictactoe.keypad.DesktopNumericKeypadCellNumberConverter;
 
 /**
  * @author edmams789
@@ -25,7 +26,7 @@ import study.sustaindev.tictactoe.component.*;
 public class Launcher {
 
     public static void main(final String[] args) {
-    final CellNumberConverter cellNumberConverter = new CellNumberConverter();
+        final CellNumberConverter cellNumberConverter = new DesktopNumericKeypadCellNumberConverter();
         final Game game = new Game(
                 new DataPrinter(cellNumberConverter),
                 new ComputerMove(),
