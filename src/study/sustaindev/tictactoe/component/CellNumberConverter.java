@@ -14,25 +14,34 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package study.sustaindev.tictactoe.component;
 
-import study.sustaindev.tictactoe.component.*;
+import study.sustaindev.tictactoe.model.Cell;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class Launcher {
+public class CellNumberConverter {
 
-    public static void main(final String[] args) {
-    final CellNumberConverter cellNumberConverter = new CellNumberConverter();
-        final Game game = new Game(
-                new DataPrinter(cellNumberConverter),
-                new ComputerMove(),
-                new UserMove(cellNumberConverter),
-                new WinnerVerifier(),
-                new CellVerifier()
-        );
-        game.play();
+    private final char[][] mapping = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
+
+    public Cell toCell(final char number) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (mapping[i][j] == number) {
+                    return new Cell(i, j);
+                }
+            }
+        }
+        return null;
+    }
+
+    public char toNumber(final Cell cell) {
+        return mapping[cell.getRow()][cell.getCol()];
     }
 }
