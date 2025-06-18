@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe.model;
+package main.java.sustaindev.study.tictactoe.model;
 
 import java.util.Arrays;
 

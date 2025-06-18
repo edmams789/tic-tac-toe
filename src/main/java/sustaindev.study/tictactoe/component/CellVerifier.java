@@ -14,23 +14,25 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe.component;
+package main.java.sustaindev.study.tictactoe.component;
 
-import study.sustaindev.tictactoe.model.Cell;
+import main.java.sustaindev.study.tictactoe.model.Cell;
+import main.java.sustaindev.study.tictactoe.model.GameTable;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public interface CellNumberConverter {
+public class CellVerifier {
 
-//    private final char[][] mapping = {
-//            {'7', '8', '9'},
-//            {'4', '5', '6'},
-//            {'1', '2', '3'}
-//    };
-
-    Cell toCell(char number);
-
-    char toNumber(Cell cell);
+    public boolean allCellsFilled(final GameTable gameTable) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (gameTable.isEmpty(new Cell(i, j))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

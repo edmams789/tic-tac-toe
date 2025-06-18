@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe.keypad;
+package main.java.sustaindev.study.tictactoe.keypad;
 
-import study.sustaindev.tictactoe.component.CellNumberConverter;
-import study.sustaindev.tictactoe.model.Cell;
+import main.java.sustaindev.study.tictactoe.component.CellNumberConverter;
+import main.java.sustaindev.study.tictactoe.model.Cell;
 
 /**
  * @author edmams789
@@ -33,7 +33,7 @@ public class TerminalNumericKeypadCellNumberConverter implements CellNumberConve
 
     @Override
     public Cell toCell(final char number) {
-        /*for (int i = 0; i < 3; i++) {
+        /* for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (mapping[i][j] == number) {
                     return new Cell(i, j);
@@ -51,3 +51,20 @@ public class TerminalNumericKeypadCellNumberConverter implements CellNumberConve
         return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
     }
 }
+
+/*
+List<String> names = Arrays.asList("Alice", "Bob", "Charlotte", "David");
+
+Optional<String> nameOptional = names.stream()
+ .filter(name -> name.startsWith("A"))
+ .findFirst();
+
+nameOptional.ifPresent(name -> System.out.println("Найдено имя, начинающееся на 'A': " + name));
+
+В этом примере мы используем Optional для поиска первого имени в списке, которое начинается на букву "A".
+Мы применяем метод filter для фильтрации и метод findFirst для поиска первого элемента.
+Затем мы используем метод ifPresent для выполнения действия, если значение было найдено.
+
+Использование Optional помогает обработать ситуации, когда значение может отсутствовать, и предотвратить ошибки NullPointerException.
+Эта фишка улучшает безопасность кода и делает его более надежным, что является важным для профессиональных разработчиков на Java
+ */

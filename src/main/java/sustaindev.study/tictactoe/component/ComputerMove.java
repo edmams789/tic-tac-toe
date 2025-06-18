@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe.component;
+package main.java.sustaindev.study.tictactoe.component;
 
-import study.sustaindev.tictactoe.model.Cell;
-import study.sustaindev.tictactoe.model.GameTable;
+import main.java.sustaindev.study.tictactoe.model.Cell;
+import main.java.sustaindev.study.tictactoe.model.GameTable;
 
 import java.util.Random;
 

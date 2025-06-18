@@ -14,15 +14,36 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package main.java.sustaindev.study.tictactoe.model;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class DataPrint {
+public class Cell {
 
-    public void printGameTable(final GameTable gameTable) {
+    private final int row;
 
+    private final int col;
+
+    public Cell(final int row, final int col) {
+        this.row = row;
+        this.col = col;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "row=" + row +
+                ", col=" + col +
+                '}';
     }
 }

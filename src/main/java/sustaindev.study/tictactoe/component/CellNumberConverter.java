@@ -14,15 +14,23 @@
  *    limitations under the License.
  */
 
-package study.sustaindev.tictactoe;
+package main.java.sustaindev.study.tictactoe.component;
+
+import main.java.sustaindev.study.tictactoe.model.Cell;
 
 /**
  * @author edmams789
  * @link http:// sustaindev.study/java
  */
-public class DataPrinter {
+public interface CellNumberConverter {
 
-    public void printMappingTable() {
+//    private final char[][] mapping = {
+//            {'7', '8', '9'},
+//            {'4', '5', '6'},
+//            {'1', '2', '3'}
+//    };
 
-    }
+    Cell toCell(char number);
+
+    char toNumber(Cell cell);
 }
