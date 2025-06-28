@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package main.java.sustaindev.study.tictactoe.keypad;
+package sustaindev.study.tictactoe.keypad;
 
-import main.java.sustaindev.study.tictactoe.component.CellNumberConverter;
-import main.java.sustaindev.study.tictactoe.model.Cell;
+import sustaindev.study.tictactoe.component.CellNumberConverter;
+import sustaindev.study.tictactoe.model.Cell;
 
 /**
  * @author edmams789

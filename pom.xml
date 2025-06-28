@@ -95,7 +95,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>main.java.sustaindev.study.tictactoe.Launcher</mainClass>
+                                <mainClass>sustaindev.study.tictactoe.Launcher</mainClass>
                             </manifest>
                         </archive>
                     </configuration>

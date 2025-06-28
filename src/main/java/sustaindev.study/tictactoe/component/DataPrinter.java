@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package main.java.sustaindev.study.tictactoe.component;
+package sustaindev.study.tictactoe.component;
 
-import main.java.sustaindev.study.tictactoe.model.Cell;
-import main.java.sustaindev.study.tictactoe.model.GameTable;
+import sustaindev.study.tictactoe.model.Cell;
+import sustaindev.study.tictactoe.model.GameTable;
 
 /**
  * @author edmams789
@@ -25,9 +25,9 @@ import main.java.sustaindev.study.tictactoe.model.GameTable;
  */
 public class DataPrinter {
 
-    private final CellNumberConverter cellNumberConverter;
+    private final sustaindev.study.tictactoe.component.CellNumberConverter cellNumberConverter;
 
-    public DataPrinter(final CellNumberConverter cellNumberConverter) {
+    public DataPrinter(final sustaindev.study.tictactoe.component.CellNumberConverter cellNumberConverter) {
         this.cellNumberConverter = cellNumberConverter;
     }
 

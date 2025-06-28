@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package main.java.sustaindev.study.tictactoe.model;
+package sustaindev.study.tictactoe.model;
 
 /**
  * @author edmams789

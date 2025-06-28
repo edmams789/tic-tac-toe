@@ -14,9 +14,9 @@
  *    limitations under the License.
  */
 
-package main.java.sustaindev.study.tictactoe.component;
+package sustaindev.study.tictactoe.component;
 
-import main.java.sustaindev.study.tictactoe.model.GameTable;
+import sustaindev.study.tictactoe.model.GameTable;
 
 import java.util.Random;
 
